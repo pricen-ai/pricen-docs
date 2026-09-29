@@ -694,6 +694,59 @@ components:
             - CONTINUE
             - null
           nullable: true
+        packageSize:
+          type: number
+          format: double
+          nullable: true
+          description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
+          example: 500
+        packageSizeUnit:
+          type: string
+          nullable: true
+          description: 'Unit of packageSize. Only metric units are accepted: mg, g, kg, ml, cl, dl, l, m3, mm, cm, m, cm2, m2, pcs. Send together with packageSize; if either is missing, no unit price can be calculated for the product'
+          example: g
+          enum:
+            - mg
+            - g
+            - kg
+            - ml
+            - cl
+            - dl
+            - l
+            - m3
+            - mm
+            - cm
+            - m
+            - cm2
+            - m2
+            - pcs
+            - null
+        apparelSize:
+          type: string
+          nullable: true
+          description: 'Letter size of a clothing item. One of: 4XS, 3XS, XXS, XS, S, M, L, XL, XXL, 3XL, 4XL, 5XL, 6XL'
+          example: L
+          enum:
+            - 4XS
+            - 3XS
+            - XXS
+            - XS
+            - S
+            - M
+            - L
+            - XL
+            - XXL
+            - 3XL
+            - 4XL
+            - 5XL
+            - 6XL
+            - null
+        sizeValue:
+          type: number
+          format: double
+          nullable: true
+          description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
+          example: 42.5
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
@@ -821,6 +874,59 @@ components:
           description: Indicates if the product is available for purchase
           nullable: true
           example: true
+        packageSize:
+          type: number
+          format: double
+          nullable: true
+          description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
+          example: 500
+        packageSizeUnit:
+          type: string
+          nullable: true
+          description: 'Unit of packageSize. Only metric units are accepted: mg, g, kg, ml, cl, dl, l, m3, mm, cm, m, cm2, m2, pcs. Send together with packageSize; if either is missing, no unit price can be calculated for the product'
+          example: g
+          enum:
+            - mg
+            - g
+            - kg
+            - ml
+            - cl
+            - dl
+            - l
+            - m3
+            - mm
+            - cm
+            - m
+            - cm2
+            - m2
+            - pcs
+            - null
+        apparelSize:
+          type: string
+          nullable: true
+          description: 'Letter size of a clothing item. One of: 4XS, 3XS, XXS, XS, S, M, L, XL, XXL, 3XL, 4XL, 5XL, 6XL'
+          example: L
+          enum:
+            - 4XS
+            - 3XS
+            - XXS
+            - XS
+            - S
+            - M
+            - L
+            - XL
+            - XXL
+            - 3XL
+            - 4XL
+            - 5XL
+            - 6XL
+            - null
+        sizeValue:
+          type: number
+          format: double
+          nullable: true
+          description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
+          example: 42.5
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
@@ -981,6 +1087,59 @@ components:
           format: double
           description: Default vat rate in percentile. If multiple vat rates are used, use the supplemental data upload to send the vat rates for each variant per store
           example: 0.24
+        packageSize:
+          type: number
+          format: double
+          nullable: true
+          description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
+          example: 500
+        packageSizeUnit:
+          type: string
+          nullable: true
+          description: 'Unit of packageSize. Only metric units are accepted: mg, g, kg, ml, cl, dl, l, m3, mm, cm, m, cm2, m2, pcs. Send together with packageSize; if either is missing, no unit price can be calculated for the product'
+          example: g
+          enum:
+            - mg
+            - g
+            - kg
+            - ml
+            - cl
+            - dl
+            - l
+            - m3
+            - mm
+            - cm
+            - m
+            - cm2
+            - m2
+            - pcs
+            - null
+        apparelSize:
+          type: string
+          nullable: true
+          description: 'Letter size of a clothing item. One of: 4XS, 3XS, XXS, XS, S, M, L, XL, XXL, 3XL, 4XL, 5XL, 6XL'
+          example: L
+          enum:
+            - 4XS
+            - 3XS
+            - XXS
+            - XS
+            - S
+            - M
+            - L
+            - XL
+            - XXL
+            - 3XL
+            - 4XL
+            - 5XL
+            - 6XL
+            - null
+        sizeValue:
+          type: number
+          format: double
+          nullable: true
+          description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
+          example: 42.5
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
@@ -1224,6 +1383,59 @@ components:
             - CONTINUE
             - null
           nullable: true
+        packageSize:
+          type: number
+          format: double
+          nullable: true
+          description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
+          example: 500
+        packageSizeUnit:
+          type: string
+          nullable: true
+          description: 'Unit of packageSize. Only metric units are accepted: mg, g, kg, ml, cl, dl, l, m3, mm, cm, m, cm2, m2, pcs. Send together with packageSize; if either is missing, no unit price can be calculated for the product'
+          example: g
+          enum:
+            - mg
+            - g
+            - kg
+            - ml
+            - cl
+            - dl
+            - l
+            - m3
+            - mm
+            - cm
+            - m
+            - cm2
+            - m2
+            - pcs
+            - null
+        apparelSize:
+          type: string
+          nullable: true
+          description: 'Letter size of a clothing item. One of: 4XS, 3XS, XXS, XS, S, M, L, XL, XXL, 3XL, 4XL, 5XL, 6XL'
+          example: L
+          enum:
+            - 4XS
+            - 3XS
+            - XXS
+            - XS
+            - S
+            - M
+            - L
+            - XL
+            - XXL
+            - 3XL
+            - 4XL
+            - 5XL
+            - 6XL
+            - null
+        sizeValue:
+          type: number
+          format: double
+          nullable: true
+          description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
+          example: 42.5
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
