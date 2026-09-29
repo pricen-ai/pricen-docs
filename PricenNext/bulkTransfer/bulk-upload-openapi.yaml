@@ -696,6 +696,7 @@ components:
           nullable: true
         packageSize:
           type: number
+          format: double
           nullable: true
           description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
           example: 500
@@ -742,6 +743,7 @@ components:
             - null
         sizeValue:
           type: number
+          format: double
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
@@ -874,6 +876,7 @@ components:
           example: true
         packageSize:
           type: number
+          format: double
           nullable: true
           description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
           example: 500
@@ -920,6 +923,7 @@ components:
             - null
         sizeValue:
           type: number
+          format: double
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
@@ -1085,6 +1089,7 @@ components:
           example: 0.24
         packageSize:
           type: number
+          format: double
           nullable: true
           description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
           example: 500
@@ -1131,6 +1136,7 @@ components:
             - null
         sizeValue:
           type: number
+          format: double
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
@@ -1379,6 +1385,7 @@ components:
           nullable: true
         packageSize:
           type: number
+          format: double
           nullable: true
           description: The net content of the package, used for unit (comparison) price calculation. Within a product group, use the same unit for all variants where possible (e.g. 100, 500, 1000 with g, rather than 100 g, 500 g, 1 kg). Send together with packageSizeUnit; if either is missing, no unit price can be calculated for the product
           example: 500
@@ -1425,6 +1432,7 @@ components:
             - null
         sizeValue:
           type: number
+          format: double
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
