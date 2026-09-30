@@ -747,6 +747,12 @@ components:
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
+        introductionDate:
+          type: string
+          format: date
+          nullable: true
+          description: The date the product was first introduced into the selection, as an ISO 8601 date (YYYY-MM-DD). On StoreProduct, the date the product was introduced in that store. Optional
+          example: '2025-03-01'
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
@@ -1140,6 +1146,12 @@ components:
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
+        introductionDate:
+          type: string
+          format: date
+          nullable: true
+          description: The date the product was first introduced into the selection, as an ISO 8601 date (YYYY-MM-DD). On StoreProduct, the date the product was introduced in that store. Optional
+          example: '2025-03-01'
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
@@ -1436,6 +1448,12 @@ components:
           nullable: true
           description: Numeric size such as a shoe size (42.5), kids' size (110) or jeans waist (32). Send numbers only, using the same size system for all variants in a group
           example: 42.5
+        introductionDate:
+          type: string
+          format: date
+          nullable: true
+          description: The date the product was first introduced into the selection, as an ISO 8601 date (YYYY-MM-DD). On StoreProduct, the date the product was introduced in that store. Optional
+          example: '2025-03-01'
         otherPrices:
           type: array
           description: Any and all other currencies and prices that the product may be sold at
