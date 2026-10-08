@@ -27,6 +27,26 @@ Due to the significant performance benefits, which makes streaming easier among 
 
 And then you're done
 
+## Supplemental data: sources
+
+Supplemental data uploads may carry an optional `source` in the request for the upload link, naming
+which feed the data belongs to — `erp`, `pim`, a supplier. It is not `dataSetName`, which is a
+free-text label; `source` is an identity.
+
+- **Re-uploading with the same source replaces that source's data** and leaves every other source
+  untouched. Several feeds can therefore keep their data side by side on the same products.
+- **Omitting `source` uses `default`**, which behaves exactly as supplemental uploads always have.
+  An existing integration that never sends one needs no change.
+- **A source name Pricen has not seen before on your account starts switched off.** The upload
+  succeeds and the data is stored and matched as normal, but it is not merged into product data
+  until someone enables that source in Pricen, under Settings → Supplemental data sources. Expect a
+  new source's first uploads to have no visible effect until it is approved; this is deliberate, so
+  that a new feed cannot change what an account's pricing is based on without a person agreeing to
+  it.
+
+Allowed characters are lowercase letters, digits, hyphens and underscores, starting with a letter or
+digit, up to 64 characters. Values are normalised: trimmed, lowercased, and spaces become hyphens.
+
 ## Try it out 
 In index.ts replace the token value with your own token (which you can get from Pricen). Then either leave the data in index.ts as is, or modify it to your liking and then just.... 
 Run `npm run test`

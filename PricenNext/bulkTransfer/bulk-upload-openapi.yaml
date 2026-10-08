@@ -343,6 +343,27 @@ paths:
                   type: string
                   description: Name of the data set to upload
                   example: "COGS-2025-01-17"
+                source:
+                  type: string
+                  description: >
+                    Optional name for the data source this upload belongs to. Re-uploading with the
+                    same source replaces that source's data and leaves every other source untouched;
+                    omitting it uploads to the "default" source. This is not dataSetName —
+                    dataSetName is a free-text label, not an identity. Allowed characters are
+                    lowercase letters, digits, hyphens and underscores, starting with a letter or
+                    digit, up to 64 characters; values are normalised (trimmed, lowercased, spaces
+                    become hyphens).
+
+
+                    A source name that has not been seen on this account before is registered
+                    DISABLED. The upload still succeeds and the data is stored and matched as
+                    normal, but it is NOT merged into product data until someone enables that
+                    source in Pricen (Settings, Supplemental data sources). This is deliberate: an
+                    API caller may deliver data under any name, but may not authorise it. Expect a
+                    new source's first uploads to have no visible effect until it is approved.
+                    Omitting `source` uses "default", which is enabled unless explicitly turned
+                    off, so an integration that never sends one is unaffected.
+                  example: "erp"
       responses:
         default:
           description: "Upload link response"
