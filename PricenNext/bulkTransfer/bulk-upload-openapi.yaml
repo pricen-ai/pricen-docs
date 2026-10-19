@@ -1210,6 +1210,16 @@ components:
           type: string
           description: Description of the alternative price
           example: 'Black Friday special price'
+        productUrl:
+          type: string
+          nullable: true
+          description: Url to the product page this price is sold on, if it differs from the productUrl of the item itself. Otherwise leave it empty
+          example: 'https://example.com/se/products/blue-shirt-m'
+        storeId:
+          type: string
+          nullable: true
+          description: If this price applies to a specific store, send the storeId here. Otherwise leave it empty. Must match the storeId in the Store object
+          example: 'acme-se-online'
     
     Store:
       description: Send all store data to be updated in a jsonl file, where each json item is in its own row
@@ -1529,7 +1539,7 @@ components:
                   example: "ssijdhfksdjhfkljlsh"
                 key:
                   type: string
-                  example: "youraccountid/bulk-uploads/supplemental-data/products/COGS-2025-01-17T09:27:25.044Z.jsonl.gz"
+                  example: "youraccountid/bulk-uploads/supplementalData/products/src-erp/COGS-2025-01-17T09:27:25.044Z.jsonl.gz"
                 Policy:
                   type: string
                   example: "sfndklaskjldhf"
