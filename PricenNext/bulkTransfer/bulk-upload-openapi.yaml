@@ -1201,6 +1201,20 @@ components:
           type: string
           description: Three letter currency code as defined by ISO-4217
           example: 'SEK'
+        priceType:
+          type: string
+          nullable: true
+          description: 'What kind of price this is, so that several prices in the same currency can be told apart. One of: regular, member, campaign, clearance, outlet, b2b, other. Use description for the details (e.g. the campaign name)'
+          example: member
+          enum:
+            - regular
+            - member
+            - campaign
+            - clearance
+            - outlet
+            - b2b
+            - other
+            - null
         originalPrice:
           type: number
           format: double
