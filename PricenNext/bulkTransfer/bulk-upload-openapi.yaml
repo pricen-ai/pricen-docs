@@ -1256,6 +1256,14 @@ components:
           type: boolean
           description: Is pricing enabled for the store
           example: true
+        country:
+          type: string
+          description: In which country the store is located in. ISO-3166-1 alpha-2
+          example: FI
+        city: 
+          type: string
+          description: City where the store is located in
+          example: Helsinki
         defaultCurrency:
           type: string
           description: Three letter currency code as defined by ISO-4217
